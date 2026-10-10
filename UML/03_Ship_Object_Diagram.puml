@@ -1,0 +1,22 @@
+@startuml
+
+title HW5 Part 3 - Ship Object Diagram
+
+object "ship1 : Ship" as ship1 {
+    name = "Titanic"
+    yearBuilt = "1912"
+}
+
+object "ship2 : CruiseShip" as ship2 {
+    name = "Royal Caribbean"
+    yearBuilt = "2022"
+    maxPassengers = 6988
+}
+
+object "ship3 : CargoShip" as ship3 {
+    name = "Ever Given"
+    yearBuilt = "2018"
+    cargoCapacity = 200000
+}
+
+@enduml

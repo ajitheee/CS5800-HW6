@@ -1,0 +1,58 @@
+@startuml
+
+title HW5 Part 5 - Folder Object Diagram
+title After Step 2 - app Folder Deleted
+
+object "php_demo1 : Folder" as phpDemo {
+    name = "php_demo1"
+}
+
+object "sourceFiles : Folder" as sourceFiles {
+    name = "Source Files"
+}
+
+object "phalcon : Folder" as phalcon {
+    name = ".phalcon"
+}
+
+object "cache : Folder" as cache {
+    name = "cache"
+}
+
+object "public : Folder" as publicFolder {
+    name = "public"
+}
+
+object "file1 : File" as file1 {
+    name = ".htaccess"
+}
+
+object "file2 : File" as file2 {
+    name = ".htrouter.php"
+}
+
+object "file3 : File" as file3 {
+    name = "index.html"
+}
+
+object "includePath : Folder" as includePath {
+    name = "Include Path"
+}
+
+object "remoteFiles : Folder" as remoteFiles {
+    name = "Remote Files"
+}
+
+phpDemo *-- sourceFiles
+phpDemo *-- includePath
+phpDemo *-- remoteFiles
+
+sourceFiles *-- phalcon
+sourceFiles *-- cache
+sourceFiles *-- publicFolder
+
+publicFolder *-- file1
+publicFolder *-- file2
+publicFolder *-- file3
+
+@enduml

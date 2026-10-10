@@ -1,0 +1,48 @@
+@startuml
+
+title HW4 Part 4 - Aggregation Class Diagram
+
+class Instructor {
+  - firstName : String
+  - lastName : String
+  - officeNumber : String
+  + Instructor(firstName : String, lastName : String, officeNumber : String)
+  + getFirstName() : String
+  + setFirstName(firstName : String) : void
+  + getLastName() : String
+  + setLastName(lastName : String) : void
+  + getOfficeNumber() : String
+  + setOfficeNumber(officeNumber : String) : void
+}
+
+class TextBook {
+  - title : String
+  - author : String
+  - publisher : String
+  + TextBook(title : String, author : String, publisher : String)
+  + getTitle() : String
+  + setTitle(title : String) : void
+  + getAuthor() : String
+  + setAuthor(author : String) : void
+  + getPublisher() : String
+  + setPublisher(publisher : String) : void
+}
+
+class Course {
+  - courseName : String
+  - instructors : Instructor[]
+  - textBooks : TextBook[]
+  + Course(courseName : String, instructors : Instructor[], textBooks : TextBook[])
+  + getCourseName() : String
+  + setCourseName(courseName : String) : void
+  + getInstructors() : Instructor[]
+  + setInstructors(instructors : Instructor[]) : void
+  + getTextBooks() : TextBook[]
+  + setTextBooks(textBooks : TextBook[]) : void
+  + print() : void
+}
+
+Course "1" o-- "2" Instructor : has
+Course "1" o-- "2" TextBook : has
+
+@enduml

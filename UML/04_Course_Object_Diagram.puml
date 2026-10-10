@@ -1,0 +1,25 @@
+@startuml
+
+title HW5 Part 4 - Course Object Diagram
+title After Step 5 - Before Second Instructor and Textbook
+
+object "course : Course" as course {
+    courseName = "CS 5800"
+}
+
+object "instructor1 : Instructor" as instructor1 {
+    firstName = "Nima"
+    lastName = "Davarpanah"
+    officeNumber = "3-2636"
+}
+
+object "book1 : TextBook" as book1 {
+    title = "Clean Code"
+    author = "Robert C. Martin"
+    publisher = "Prentice Hall"
+}
+
+course o-- instructor1 : instructor
+course o-- book1 : textbook
+
+@enduml

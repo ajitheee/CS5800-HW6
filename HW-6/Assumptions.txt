@@ -1,0 +1,3 @@
+Assumptions:
+
+The Website checks facility availability before sending the rental request to School Staff. School Staff reviews only requests for available facilities. The Payment Service is treated as an external service, so its internal payment processing is not modeled. The Website records rejection or payment failure before the Email Service sends a notification. When payment succeeds, the Website saves the booking before the renter receives the confirmation email.
